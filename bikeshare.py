@@ -23,9 +23,9 @@ def get_filters():
         city = input("\nPlease input Chicago, New York city, Washington\n").lower()
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    month = input("\nPlease input month All, January, February, March, April, May, June\n").lower()
-    while month not in {'all', 'january', 'february', 'march', 'april', 'may', 'june'}:
-        month = input("\nPlease input month All, January, February, March, April, May, June\n").lower()
+    month = input("\nPlease input month All or month as a number January:1, February:2, March:3, April:4, May:5, June:6\n").lower()
+    while month not in {'all', '1', '2', '3', '4', '5', '6'}:
+        month = input("\nPlease input month All or month as a number January:1, February:2, March:3, April:4, May:5, June:6\n").lower()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input("\nPlease input day All, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday,Sunday\n").lower()
@@ -57,8 +57,6 @@ def load_data(city, month, day):
 
     # filter by month to create the new dataframe
     if month != 'all':
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
-        month = months.index(month) + 1
         df = df[df['month'] == month]
 
     # extract month and day of week from Start Time to create new columns
