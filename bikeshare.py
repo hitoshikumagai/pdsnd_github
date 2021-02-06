@@ -72,7 +72,9 @@ def load_data(city, month, day):
     return df
 
 def time_stats(df):
-    """Displays statistics on the most frequent times of travel."""
+    """ Displays statistics on the most frequent times of travel.
+        Flow Set dataframe with count -> Print
+    """
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
@@ -94,8 +96,9 @@ def time_stats(df):
     print('-'*40)
 
 def station_stats(df):
-    """Displays statistics on the most popular stations and trip."""
-
+    """Displays statistics on the most popular stations and trip.
+           Flow Set dataframe with count -> Print
+    """
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
@@ -115,7 +118,9 @@ def station_stats(df):
     print('-'*40)
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """ Displays statistics on the total and average trip duration.
+        Flow Set dataframe with count -> Print
+    """
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -136,7 +141,9 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def user_stats(df, city):
-    """Displays statistics on bikeshare users."""
+    """ Displays statistics on bikeshare users.
+        Flow Set dataframe with count -> Print
+    """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
@@ -170,7 +177,8 @@ def user_stats(df, city):
     print('-'*40)
 
 def main():
-    """  Changed:   user_stats(df) -> user_stats(df, city)  Washington has no columns 'Gender' , 'Year of Birth'
+    """  Changed:   user_stats(df) -> user_stats(df, city)  
+         Root   :   Washington has no columns 'Gender' , 'Year of Birth'
     """
     while True:
         city, month, day = get_filters()
